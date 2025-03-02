@@ -25,13 +25,13 @@ FROM
 GROUP BY YearMonth
 ORDER BY YearMonth;
 
-#Compare average sales during holiday weeks versus non-holiday weeks.
+# Compare average sales during holiday weeks versus non-holiday weeks.
 
 create view avg_sale_during_holiday as
 select t.Isholiday , avg(t.Weekly_Sales) as avgsales from train t
 group by t.Isholiday ;
 
-#Top 5 Stores by Average Sales
+# Top 5 Stores by Average Sales
 
 create view Top_stores_avg_salaary as
 SELECT 
@@ -116,7 +116,7 @@ GROUP BY t.Dept
 ORDER BY Average_Weekly_Sales DESC;
 
 
-#Calculate the annual growth rate in sales.
+# Calculate the annual growth rate in sales.
 
 create view annual_sale_growth as
 SELECT
